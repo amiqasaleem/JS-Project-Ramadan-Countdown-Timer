@@ -1,0 +1,138 @@
+@font-face {
+    font-family: "Hidayatullah";
+    src: url("HidayatullahDemo-mLp39.ttf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.lantern {
+    position: fixed;
+    top: -24px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+    animation: up-down 0.75s;
+}
+.mosque {
+    position: fixed;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+    animation: down-up 0.75s;
+}
+.mosque img,
+.lantern img{
+    display: flex;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 25%;
+}
+.main {
+    margin: 4vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rebeccapurple; */
+    height: 30vh;
+    z-index: 2;
+}
+h1 {
+    margin-top: 8vh;
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Hidayatullah";
+}
+h3 {
+    font-family: "Hidayatullah";
+    font-size: 1.8rem;
+}
+.card {
+    background: rgb(155, 155, 155);
+    color: black;
+    margin: 0.4vw;
+    width: 10%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.para {
+    font-size: 1.4rem;
+    font-family: "Hidayatullah";
+    text-align: center;
+}
+@keyframes up-down {
+    0% {
+        top: -100%;
+    }
+}
+@keyframes down-up {
+    0% {
+        bottom:  -100%;
+    }
+}
+@media (max-width:576px){
+.mosque img,
+.lantern img {
+    width: 95%;
+    margin: 4vw;   
+}
+h1 {
+    font-size: 3rem;
+    margin-top: 12vw;
+    margin: 8vw;
+}
+.para {
+    margin: 8vw;
+    font-size: 1rem;
+}
+.card{
+    margin: 1vw;
+    width: 40%;
+    height: 40%;
+}
+h3 {
+    font-size: 5vw;
+}
+p {
+    font-size: 3vw;
+}
+}
+@media (min-width:577px) and (max-width:768px){
+.mosque img,
+.lantern img {
+    width: 95%;   
+}
+.card{
+    margin: 2vw;
+    width: 40%;
+    height: 40%;
+}
+}
+@media (min-width:800px) and (max-width:1200px){
+.mosque img,
+.lantern img {
+    width: 95%;   
+}
+.card{
+    margin: 1vw;
+    width: 20%;
+    height: 40%;
+}
+}
